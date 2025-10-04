@@ -1,0 +1,124 @@
+body{
+    background-color: #f0f0f0;
+    
+}
+
+.contenedor {
+    display: flex;
+    gap: 2em;
+    perspective: 1200px;
+    justify-content: space-around;
+    
+
+}
+.tarjeta_contenedor{
+    position: relative;
+    width: 475px;
+    height: 275px;
+    cursor: pointer;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+    
+}
+.tarjeta_frontal{
+    display: flex;
+    flex-direction: column;
+    
+}
+.tarjeta_frontal,
+.tarjeta_trasera {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    font-family: "Outfit";
+    border: 1px solid black;
+    width: 475px;
+    height: 275px;
+    background: linear-gradient(to bottom, indianred, indigo);
+    border-radius: 10px;
+    color: white;
+    overflow: hidden;
+    box-shadow: 0px 0px 5px black;
+    text-shadow: 0px 0px 5px black;
+    backface-visibility: hidden;
+    
+    
+    
+}
+.tarjeta_frontal__numero {
+    font-size: 35px;   
+    letter-spacing: 2px; 
+    margin: 0.3em 0;
+    font-family: "Kode Mono";
+}
+
+.tarjeta_frontal__nombre,
+.tarjeta_frontal__fecha {
+    font-size: 20px;
+    margin: 0.2em 1em;
+}
+
+
+.tarjeta_frontal__titulo {
+    text-align: right;
+    margin-right: 1em;
+}
+
+
+.tarjeta_frontal__fecha {
+    margin-top: auto;
+    text-align: right;
+    margin-right: 1em;
+    font-family: "Kode Mono";
+}
+
+.tarjeta_frontal__chip {
+    width: 55px;
+    margin-left: 1em;
+
+}
+
+.tarjeta_frontal__numero {
+    text-align: center;
+
+}
+
+.tarjeta_frontal__banco {
+    align-self: flex-end;
+    width: 100px;
+    margin-right: 1em;
+    margin-bottom: 1em;
+    
+}
+
+.tarjeta_trasera__titulo,
+.tarjeta_trasera__texto2,
+.tarjeta_trasera__texto {
+    text-align: center;
+}
+.tarjeta_trasera{
+    transform: rotateY(180deg);
+}
+.tarjeta_contenedor.flipped{
+    transform: rotateY(180deg);
+}
+
+.cinta_magnetica {
+    border: 2px solid black;
+    height: 45px;
+    background-color: black;
+}
+
+.codigo_seguridad {
+    border: 1px solid black;
+    background-color: white;
+    width: 400px;
+    margin-left: 2.5em;
+    text-align: right;
+    color: black;
+    font-family: "Kode Mono";
+    text-shadow: none;
+    
+}
